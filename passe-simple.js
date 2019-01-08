@@ -236,7 +236,7 @@ function generate_question() {
 }
 
 function check_answer() {
-    if (response_in.value.trim() == reponse_correcte) {
+    if (response_in.value.trim().toLowerCase().normalize("NFC") == reponse_correcte) {
         feedback_out.innerHTML = "C'est correct!";
         generate_question();
     } else {
